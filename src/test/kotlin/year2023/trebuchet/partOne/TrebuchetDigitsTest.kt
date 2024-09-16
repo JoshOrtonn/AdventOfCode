@@ -1,11 +1,10 @@
-package year2023.Trebuchet
+package year2023.trebuchet.partOne
 
-import org.example.year2023.Trebuchet.Trebuchet
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class TrebuchetTest {
-    private val trebuchetTest = Trebuchet()
+class TrebuchetDigitsTest {
+    private val trebuchetDigitsTest = TrebuchetDigits()
     private val sampleInput: List<String> = buildList<String> {
         add("1abc2")
         add("pqr3stu8vwx")
@@ -15,12 +14,12 @@ class TrebuchetTest {
 
     @Test
     fun isCorrectCalibrationDocumentValue() {
-        assertEquals(trebuchetTest.decipherDocument(), 55971)
+        assertEquals(trebuchetDigitsTest.decipherDocument(), 55971)
     }
 
     @Test
     fun isCorrectCalibrationDocumentSampleInput() {
-        assertEquals(trebuchetTest.decipherDocument(sampleInput), 142)
+        assertEquals(trebuchetDigitsTest.decipherDocument(sampleInput), 142)
     }
 
 }

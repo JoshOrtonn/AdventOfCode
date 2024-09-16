@@ -1,6 +1,6 @@
-package org.example.year2023.Trebuchet
+package year2023.trebuchet.partOne
 
-import java.io.File
+import year2023.readFile
 
 /*
 --- Day 1: Trebuchet?! ---
@@ -38,12 +38,7 @@ Consider your entire calibration document. What is the sum of all of the calibra
 To play, please identify yourself via one of these services:
 
  */
-class Trebuchet {
-    private fun readFile(): List<String> = buildList<String> {
-        File("/Users/lottieware/IdeaProjects/AdventOfCode/src/main/kotlin/year2023/Trebuchet/textInput.txt")
-            .useLines { lines -> lines.forEach { add(it) } }
-    }
-
+class TrebuchetDigits {
     fun decipherDocument(sampleInput: List<String>? = null): Int {
         val input = sampleInput ?: readFile()
         var runningTotal: Int = 0
