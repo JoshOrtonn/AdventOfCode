@@ -1,6 +1,6 @@
-package org.example.year2023.Trebuchet.part2
+package year2023.trebuchet.partTwo
 
-import java.io.File
+import year2023.readFile
 
 
 /*
@@ -27,18 +27,9 @@ In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Addi
      } else if ("o" "t" "f" "s" "e" "n")
      iterate max five times, if at any point matches word in the set, add to List()
      } else {do nothing}
-
-
-
-
  */
 
-class TrebuchetPartTwo {
-    private fun readFile(): List<String> = buildList<String> {
-        File("/Users/lottieware/IdeaProjects/AdventOfCode/src/main/kotlin/year2023/Trebuchet/textInput.txt")
-            .useLines { lines -> lines.forEach { add(it) } }
-    }
-
+class TrebuchetWordedDigits {
     private val digitSet = buildMap<String, Char> {
         put("one", '1')
         put("two", '2')
